@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<Module>
+	
+	<GlobalSolutionName>ThirdParty</GlobalSolutionName>
+	<GlobalNamespace>potato</GlobalNamespace>
+
+	<StaticLibrary>
+		<Name>thirdparty_libmpdec</Name>
+		<SourceRoot>.</SourceRoot>
+		<ExportedIncludeDirectory>.</ExportedIncludeDirectory>
+		<ThirdParty>true</ThirdParty>
+		<PreprocessorDefines>BUILD_LIBMPDEC</PreprocessorDefines>
+		<GlobalPreprocessorDefines>MPD_CONFIG_64</GlobalPreprocessorDefines>
+		<ThirdPartySourceFile>
+			basearith.c;
+			bench.c;
+			bench_full.c;
+			constants.c;
+			context.c;
+			convolute.c;
+			crt.c;
+			difradix2.c;
+			fnt.c;
+			fourstep.c;
+			io.c;
+			mpalloc.c;
+			mpdecimal.c;
+			mpsignal.c;
+			numbertheory.c;
+			sixstep.c;
+			transpose.c
+		</ThirdPartySourceFile>
+
+		<FilterPlatform include="windows">
+			<PreprocessorDefines>MASM</PreprocessorDefines>
+		</FilterPlatform>
+		
+	</StaticLibrary>
+
+</Module>
